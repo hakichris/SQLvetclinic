@@ -16,7 +16,6 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -36,20 +35,6 @@
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
-  </ul>
-</details>
-
-<details>
 <summary>Database</summary>
   <ul>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
@@ -67,10 +52,6 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [will be available soon](<replace-with-your-deployment-URL>)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,19 +73,12 @@ Clone this repository to your desired folder:
 
 https://github.com/hakichris/SQLvetclinic.git
 
-### Deployment
-
-You can deploy this project using:
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
-git hub deployment. 
-
-> Mention all of the collaborators of this project.
 
 👤 **Christian Hakizimana**
 
@@ -117,8 +91,6 @@ git hub deployment.
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[graphical design of the query ouput]**
 - [ ] **[expand the table]**
@@ -139,8 +111,6 @@ Feel free to check the [issues page](https://github.com/hakichris/SQLvetclinic/i
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project kindly give it a star. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,8 +118,6 @@ If you like this project kindly give it a star.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank Microverse. 
 

@@ -1,5 +1,3 @@
-/* Populate database with sample data. */
-
 INSERT INTO animals (animal_name, date_of_birth, escape_attempts,
 neutered, weight_kg) 
 VALUES 
