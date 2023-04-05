@@ -26,11 +26,8 @@ SELECT COUNT(name) FROM animals;
 SELECT COUNT(name) FROM animals WHERE escape_attempts = 0;
 SELECT AVG(weight_kg) as avg_amount FROM animals;
 
-SELECT AVG(escape_attempts) as avg_amount_neutered FROM animals WHERE neutered = TRUE;
-SELECT AVG(escape_attempts) as avg_amount_notneutered FROM animals WHERE neutered = FALSE;
+SELECT AVG(escape_attempts) as avg_amount_notneutered FROM animals GROUP BY neutered
 
-SELECT MIN(weight_kg), MAX(weight_kg) FROM animals WHERE species = 'pokemon';
-SELECT MIN(weight_kg), MAX(weight_kg) FROM animals WHERE species = 'digimon';
+SELECT MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species ;
 
-SELECT AVG(escape_attempts) as avg_amount FROM animals WHERE species= 'pokemon' AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
-SELECT AVG(escape_attempts) as avg_amount FROM animals WHERE species= 'digimon' AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
+SELECT AVG(escape_attempts) as avg_amount FROM animals GROUP BY species, date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
