@@ -31,3 +31,6 @@ SELECT AVG(escape_attempts) as avg_amount_notneutered FROM animals WHERE neutere
 
 SELECT MIN(weight_kg), MAX(weight_kg) FROM animals WHERE species = 'pokemon';
 SELECT MIN(weight_kg), MAX(weight_kg) FROM animals WHERE species = 'digimon';
+
+SELECT AVG(escape_attempts) as avg_amount FROM animals WHERE species= 'pokemon' AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
+SELECT AVG(escape_attempts) as avg_amount FROM animals WHERE species= 'digimon' AND date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
