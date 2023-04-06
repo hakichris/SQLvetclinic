@@ -1,8 +1,8 @@
-SELECT * FROM animals WHERE name LIKE '%mon';
-SELECT name FROM animals WHERE date_of_birth BETWEEN '2016/01/01' AND '2019/12/31';
-SELECT name FROM animals WHERE neutered=TRUE AND escape_attempts < 3;
-SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name = 'Pikachu';
-SELECT date_of_birth, escape_attempts FROM animals WHERE weight_kg > 10.5;
-SELECT * FROM animals WHERE neutered = TRUE;
-SELECT * FROM animals WHERE NOT name = 'Gabumon';
-SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3 
+SELECT owners.id,full_name, owner_id, name FROM animals LEFT JOIN owners ON owners.id = owner_id WHERE full_name = 'Melody Pond ';
+SELECT * FROM animals LEFT JOIN species ON species.id = species_id WHERE species.name = 'Pokemon' ;
+SELECT * FROM owners INNER JOIN animals ON owners.id = owner_id OR owner_id IS NULL;
+SELECT COUNT(animals.id) totalcount FROM animals LEFT JOIN species ON species.id = species_id GROUP BY species.name
+
+SELECT species.name, owners.full_name FROM species LEFT JOIN owners ON species.id = owners.id WHERE owners.full_name = 'Jennifer Orwell';
+SELECT * FROM animals LEFT JOIN owners ON owners.id = owner_id WHERE owners.full_name = 'Dean Winchester' AND escape_attempts = 0;
+SELECT COUNT(animals.name) as frequency , full_name  FROM animals RIGHT JOIN owners ON owners.id = owner_id GROUP BY owners.full_name
