@@ -1,8 +1,15 @@
-INSERT INTO animals (name, date_of_birth, escape_attempts,
-neutered, weight_kg) 
+INSERT INTO owners (full_name, age) 
 VALUES 
-('Agumon', '2020-02-03', 0, FALSE,10.23),
-('Gabumon', '2018-11-15', 2, TRUE,8.0),
-('Pikachu', '2021-01-07', 1, FALSE,15.04),
-('Devimon', '2017-05-12', 5, TRUE,11.0)
+('Sam Smith', 34),
+('Jennifer Orwell', 19),
+('Bob', 45),
+('Melody Pond ', 77),
+('Dean Winchester', 14),
+('Jodie Whittaker', 38)
+RETURNING *;
+
+INSERT INTO species(name) 
+VALUES 
+('Pokemon'),
+('Digimon')
 RETURNING *;
