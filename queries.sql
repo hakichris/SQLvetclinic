@@ -14,6 +14,10 @@ SELECT A.name, V.name, Vi.visit_date FROM animals A JOIN visits Vi ON A.id = Vi.
 
 SELECT Vi.visit_date, A.name AS animal_name, A.date_of_birth, A.escape_attempts, A.neutered, A.weight_kg, species.name AS specie, V.name AS vet, V.age, V.date_of_graduation FROM species JOIN animals A ON species.id = A.species_id JOIN visits Vi ON A.id = Vi.animals_id JOIN vets V ON Vi.vets_id = V.id ORDER  BY Vi.visit_date DESC LIMIT  1; 
 
-WITH view AS (SELECT S.name, V.name AS vet FROM vets V FULL JOIN visits Vi ON  V.id = Vi.vets_id FULL JOIN specialization SV ON SV.vets_id = V.id FULL JOIN species S ON S.id = SV.species_id WHERE S.name is NULL) SELECT vet, COUNT(vet) FROM view GROUP BY vet;
+SELECT count(*)
+  FROM visits
+  LEFT JOIN animals ON animals.id = visits.animal_id
+  LEFT JOIN vets ON vets.id = visits.vet_id
+  WHERE animals.species_id NOT IN (SELECT species_id FROM specializations WHERE vet_id = vets.id);
 
 SELECT V.name AS vet ,S.name AS species,  COUNT(S.name) AS count FROM vets V FULL JOIN visits Vi ON  V.id = Vi.vets_id FULL JOIN animals A ON Vi.animals_id = A.id FULL JOIN species S ON S.id = A.species_id GROUP BY S.name,V.name HAVING V.name = 'Maisy Smith ' ORDER BY count DESC LIMIT 1;
